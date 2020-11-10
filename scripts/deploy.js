@@ -1,10 +1,10 @@
 async function main() {
-  const WOOFToken = await hre.ethers.getContractFactory("WOOFToken");
-  const woof = await WOOFToken.deploy(ethers.utils.parseEther("1000"));
+  const Club = await hre.ethers.getContractFactory("Club");
+  const club = await Club.deploy();
 
-  await woof.deployed();
+  await club.deployed();
 
-  console.log("Token deployed to:", woof.address);
+  console.log("Club deployed to:", club.address);
 }
 
 main()
